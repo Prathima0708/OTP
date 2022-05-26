@@ -5,7 +5,7 @@ import BasicTabs from '../components/layout/MainNavigation'
 
 import Tabs from '../components/Tabs/Tabs'
 import { useRouter } from 'next/router'
-import Profile from '../components/Profile'
+
 
 
 

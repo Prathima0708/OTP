@@ -1,10 +1,11 @@
 import { useState } from "react";
-import AuthForm from "../components/Auth/AuthForm";
+
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
 import BasicTabs from "../components/layout/MainNavigation";
 import MainNavigation from "../components/layout/MainNavigation";
+import LoginForm from "../components/Auth/LoginForm";
 
 export default function Home() {
   const adminUser = {
@@ -14,6 +15,8 @@ export default function Home() {
   
   const [user, setUser] = useState({ name: "", phone: "" });
   const [error, setError] = useState("");
+  const router=useRouter()
+  
   const Login = (details) => {
     console.log(details);
     // if(details.email==adminUser.email && details.password==adminUser.password){
@@ -36,6 +39,7 @@ export default function Home() {
     console.log("logout");
     setUser({ name: "", phone: "" });
     setError("");
+    router.push('/')
   };
   return (
     <>
@@ -48,19 +52,20 @@ export default function Home() {
 
           
            
-          <button onClick={Logout}>logout</button>
-          <br /><br/>
+          {/* <button onClick={Logout}>logout</button> */}
+        
 
           {/* <Link href="/user">Click here to view Dashboard</Link> */}
 
           {/* <BasicTabs /> */}
-          <MainNavigation user={user}   />
+          <MainNavigation user={user}  />
+           <button className="mt-24 border-black border-2 rounded-md p-3  ml-5" onClick={Logout}>logout</button> 
         </div>
       ) : (
         
         
         
-        <AuthForm Login={Login} error={error} />
+        <LoginForm Login={Login} error={error} />
       )}
       
     </>

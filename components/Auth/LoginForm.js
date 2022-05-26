@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import classes from "./AuthForm.module.css";
 
-const AuthForm = ({ Login, error }) => {
+const LoginForm = ({ Login, error }) => {
   const router = useRouter();
 
   const [isLogin, setIsLogin] = useState(true);
@@ -89,7 +89,7 @@ const AuthForm = ({ Login, error }) => {
   );
 };
 
-export default AuthForm;
+export default LoginForm;
 
 
 
