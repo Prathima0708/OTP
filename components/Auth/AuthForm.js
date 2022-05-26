@@ -26,15 +26,19 @@ const AuthForm = ({ Login, error }) => {
   const log = (e) => {
     setShow(true)
     e.preventDefault();
+  
     Login(details);
    
     // router.push('/hello')
   };
 
+ 
+
   return (
     <section className={classes.auth}>
+       
       <h1>{isLogin ? "Login" : "Sign Up"}</h1>
-      {error != "" ? <div>{error}</div> : ""}
+      {error != ""  ? <div>{error}</div> : ""}
       <form onSubmit={log}>
         <div className={classes.control}>
           <label htmlFor="name">Name</label>
@@ -58,7 +62,7 @@ const AuthForm = ({ Login, error }) => {
             value={details.phone}
           />
         </div>
-    {show &&   <div className={classes.control}>
+  {show &&  <div className={classes.control}>
           <label htmlFor="password">Enter your OTP</label>
        <input
             type="password"
@@ -71,7 +75,7 @@ const AuthForm = ({ Login, error }) => {
           />
         </div>}
         <div className={classes.actions}>
-          <button>{isLogin ? "Login" : "Create Account"}</button>
+          <button >{isLogin ? "Login" : "Create Account"}</button>
           <button
             type="button"
             className={classes.toggle}
@@ -86,3 +90,8 @@ const AuthForm = ({ Login, error }) => {
 };
 
 export default AuthForm;
+
+
+
+
+
