@@ -9,6 +9,7 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 import Checkout from "../Company/CompanyForm"
 import CompanyForm from "../Company/CompanyForm"
+import Dashboard from "../Dashboard/Dashboard"
 
 
 // import classes from './MainNavigation.module.css';
@@ -132,14 +133,15 @@ const router=useRouter()
       <Tabs >
     <div label="Dashboard">
             <h2 className="text-2xl font-bold">Dashboard Page </h2>
-        <p className="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+     <Dashboard />
         </div>
 
         <div label="Profile">
             <h2 className="text-2xl font-bold">Profile Page </h2>
         <p className="mt-3">Welcome ,<span className="font-bold"> {user.name}</span></p>
         <p>Phone Number: <span className="font-bold">{user.phone}</span></p>
-      <CompanyForm />
+        
+      {/* <CompanyForm /> */}
         </div>
 
         <div label="Product">
