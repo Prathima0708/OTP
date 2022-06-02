@@ -8,6 +8,8 @@ import Button from "@mui/material/Button";
 import { styled } from '@mui/material/styles';
 import { red, green, blue } from '@mui/material/colors';
 import { Typography } from "@mui/material";
+import Order from "../Order/Order";
+import TreeList from "../Tree/TreeList";
 
 
 
@@ -40,13 +42,14 @@ const Dashboard = () => {
         </Stack>
        
       </div>
-
+{/* 
       <div className="w-full border-2 h-36 mt-3">
         <h2 className="mt-3 ml-7 font-bold">Placed Order</h2>
 
         <Stack spacing={33} direction="row" className="mt-3">
           <Button className="mt-3" variant="text">
-            Order ID
+            Place Order
+           
           </Button>
 
           <Button  className="left-56 md:ml-auto flex" variant="text">
@@ -56,7 +59,15 @@ const Dashboard = () => {
             Status
           </Button>
         </Stack>
-      </div>
+      </div> */}
+
+  <div className="w-full border-2 h-36 mt-3">
+        <h2 className="mt-3 ml-7 font-bold">Placed Order</h2>
+
+   {/* <Order /> */}
+   <TreeList />
+      </div> 
+
       
     </>
   );

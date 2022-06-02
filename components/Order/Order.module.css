@@ -1,0 +1,101 @@
+.container {
+    margin: 1rem;
+  }
+
+/* input {
+    padding: 4px;
+    width: 55px;
+    z-index: 1;
+    position: relative;
+    border: none;
+  } */
+
+  .key,.value{
+    padding: 4px;
+    width: 55px;
+    z-index: 1;
+    position: relative;
+    border: none;
+  }
+
+  .sub-item {
+    /* padding: 20px 0 0 20px; */
+    padding: 1rem;
+    margin-left: 1.5rem;
+    position: relative;
+  }
+
+  .sub-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 39px;
+    height: 1px;
+    background: black;
+    left: 0;
+    top: 30px;
+    background: black;
+  }
+
+  .sub-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background: black;
+    left: 0;
+    top: -10px;
+    background: black;
+  }
+
+  .sub-item:not(:last-child)::after {
+    height: 100%;
+  }
+
+  .arrow {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+
+  .arrow.open {
+    transform: rotate(90deg);
+    transition: all 0.15s;
+  }
+
+  .arrow:not(.open) ~ .sub-item,
+  .arrowhide {
+    display: none;
+  }
+
+  /* button {
+    background-color: white;
+    border: none;
+    font-size: 2rem;
+  } */
+
+  .add,.remove{
+    background-color: white;
+    border: none;
+    font-size: 2rem;
+  }
+
+  #base > .keyvaluecontainer > .remove {
+    display: none;
+  }
+
+  .get-json-button {
+    border: 1px solid black;
+    margin: 1rem 0;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  .addItem {
+    font-size: 19px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 3px;
+  }
